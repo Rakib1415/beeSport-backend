@@ -1,0 +1,110 @@
+const mongoose = require("mongoose");
+const appModel = new mongoose.Schema(
+  {
+    // App Info
+    app_name: { type: String, required: true, unique: true },
+    app_unique_id: { type: String, required: true, unique: true },
+    status: { type: String, default: "1" },
+
+    app_logo: { type: String, default: "" },
+    android_required_app_logo: { type: String, default: "" },
+    ios_required_app_logo: { type: String, default: "" },
+
+    android_notification_type: { type: String },
+    sport_api_base_url: { type: String },
+    sport_api_key: { type: String },
+    android_onesignal_app_id: { type: String },
+    android_onesignal_api_key: { type: String },
+    android_firebase_server_key: { type: String },
+    android_firebase_topics: { type: String },
+    ios_notification_type: { type: String },
+    ios_onesignal_app_id: { type: String },
+    ios_onesignal_api_key: { type: String },
+    ios_firebase_server_key: { type: String },
+    ios_firebase_topics: { type: String },
+    sportapi_base_url: { type: String },
+    sportapi_api_key: { type: String },
+    support_mail: { type: String },
+    from_mail: { type: String },
+    from_name: { type: String },
+    smtp_host: { type: String },
+    smtp_port: { type: String },
+    smtp_username: { type: String },
+    smtp_password: { type: String },
+    smtp_encryption: { type: String },
+
+    // Social Information
+    facebook: { type: String },
+    instagram: { type: String },
+    twitter: { type: String },
+    telegram: { type: String },
+    youtube: { type: String },
+
+    // Android Settings Information
+    android_privacy_policy: { type: String },
+    android_terms_conditions: { type: String },
+    android_app_share_link: { type: String },
+    android_default_page: { type: String },
+    android_app_publishing_control: { type: String },
+    android_live_version_code: { type: String },
+    android_ad_type: { type: String },
+    // android_ad_type_name: { type: Object },
+    android_ad_switch: { type: String },
+    android_multiple_ad: { type: String },
+    android_others_ad_type: [{ type: Object }],
+    android_app_ads: [{ type: Object }],
+    android_click_control: { type: String },
+    android_ad_status: { type: String },
+    android_version_name: { type: String },
+    android_version_code: { type: String },
+    android_force_update: { type: String, default: "no" },
+    android_update_for: { type: String, default: "in" },
+    android_app_url: { type: String },
+    android_button_text: { type: String },
+    android_description: { type: String },
+    android_required_app_enable: { type: String, default: "no" },
+    android_required_app_application_id: { type: String },
+    android_required_app_url: { type: String },
+    android_required_app_name: { type: String },
+    android_required_app_description: { type: String },
+    android_ad: { type: Object },
+
+    // IOS Settings Information
+    ios_privacy_policy: { type: String },
+    ios_terms_conditions: { type: String },
+    ios_app_share_link: { type: String },
+    ios_app_rating_link: { type: String },
+    ios_default_page: { type: String },
+    ios_app_publishing_control: { type: String },
+    ios_live_version_code: { type: String },
+    ios_ad_type: { type: String },
+    // ios_ad_type_name: { type: String },
+    ios_app_ads: [{ type: Object }],
+    ios_multiple_ad: { type: String },
+    ios_others_ad_type: [{ type: Object }],
+    ios_ad_switch: { type: String },
+    ios_click_control: { type: String },
+    ios_ad_status: { type: String },
+    ios_version_name: { type: String },
+    ios_version_code: { type: String },
+    ios_force_update: { type: String, default: "no" },
+    ios_update_for: { type: String, default: "in" },
+    ios_app_url: { type: String },
+    ios_button_text: { type: String },
+    ios_description: { type: String },
+    ios_required_app_enable: { type: String, default: "no" },
+    ios_required_app_application_id: { type: String },
+    ios_required_app_url: { type: String },
+    ios_required_app_name: { type: String },
+    ios_required_app_description: { type: String },
+    ios_ad: { type: Object },
+    ip: { type: String }
+  },
+  {
+    timestamps: true
+  }
+);
+
+const AppModel = mongoose.model("AppModel", appModel);
+
+module.exports = AppModel;

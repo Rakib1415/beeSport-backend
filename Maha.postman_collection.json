@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "c81b80c2-5abc-4494-af8e-8cb5965675ea",
+		"name": "Maha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26473215"
+	},
+	"item": [
+		{
+			"name": "Vote",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "f00087d5d0a30ea91816364a4852631e00fc3cd33ddde89dfc5f161365b2933f",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/v3/football/fixtures/head-to-head/1104/252?include=participants;state;periods;scores;",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"v3",
+								"football",
+								"fixtures",
+								"head-to-head",
+								"1104",
+								"252"
+							],
+							"query": [
+								{
+									"key": "include",
+									"value": "participants;state;periods;scores;"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "banner",
+			"item": [
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6Ijg4MDE5ODc1MTgwMjUiLCJpYXQiOjE3MTE0MzQ5NzMsImV4cCI6MTcxNDAyNjk3M30.N1unA9j9gxAx2KHUQMzjV5ipLWuR9iaD2TTEhxEQcHo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "smallBanner",
+									"type": "file",
+									"src": "/home/yeasir/Downloads/sample1.jpeg"
+								},
+								{
+									"key": "largeBanner",
+									"type": "file",
+									"src": "/home/yeasir/Downloads/sample.jpg"
+								},
+								{
+									"key": "interstitial",
+									"type": "file",
+									"src": "/home/yeasir/Downloads/sample3.gif"
+								},
+								{
+									"key": "country",
+									"value": "BD",
+									"type": "text"
+								},
+								{
+									"key": "smallAction",
+									"value": "http://smallAction",
+									"type": "text"
+								},
+								{
+									"key": "largeAction",
+									"value": "http://largeAction",
+									"type": "text"
+								},
+								{
+									"key": "interstitialAction",
+									"value": "http://interstitialAction",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/admin/banner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"banner"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "post",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6Ijg4MDE5ODc1MTgwMjUiLCJpYXQiOjE3MTE0MzQ5NzMsImV4cCI6MTcxNDAyNjk3M30.N1unA9j9gxAx2KHUQMzjV5ipLWuR9iaD2TTEhxEQcHo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "smallAd",
+											"type": "file",
+											"src": "/home/yeasir/Downloads/sample1.jpeg"
+										},
+										{
+											"key": "largeAd",
+											"type": "file",
+											"src": "/home/yeasir/Downloads/sample.jpg"
+										},
+										{
+											"key": "interstitial",
+											"type": "file",
+											"src": "/home/yeasir/Downloads/sample3.gif"
+										},
+										{
+											"key": "country",
+											"value": "BD",
+											"type": "text"
+										},
+										{
+											"key": "smallAction",
+											"value": "http://smallAction",
+											"type": "text"
+										},
+										{
+											"key": "largeAction",
+											"value": "http://largeAction",
+											"type": "text"
+										},
+										{
+											"key": "interstitialAction",
+											"value": "http://interstitialAction",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/admin/banner",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"banner"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "545"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"221-BjD/Vod2Ur+Fd296III2xV/szHw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Mar 2024 07:59:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"ad\": {\n        \"country\": \"BD\",\n        \"ad\": {\n            \"small\": {\n                \"image\": \"https://res.cloudinary.com/dhvfqgo7q/image/upload/v1711526358/maha-score/ad/cblsgjewmscfbpn9lzd7.jpg\",\n                \"action\": \"http://smallAction\"\n            },\n            \"large\": {\n                \"image\": \"https://res.cloudinary.com/dhvfqgo7q/image/upload/v1711526359/maha-score/ad/ns69vgnl3pluftziijug.webp\",\n                \"action\": \"http://largeAction\"\n            }\n        },\n        \"interstitial\": {\n            \"image\": \"https://res.cloudinary.com/dhvfqgo7q/image/upload/v1711526361/maha-score/ad/htcc6p7h2o3h2oinndoz.gif\",\n            \"action\": \"http://interstitialAction\"\n        },\n        \"_id\": \"6603d1d9b5f46948ff07ecb4\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/banner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"banner"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/banner",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"banner"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "553"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"229-uFGNuIkAeUzoqs3wWoCLTwdZLt8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 27 Mar 2024 08:40:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"banner\": {\n        \"banner\": {\n            \"small\": {\n                \"image\": \"https://res.cloudinary.com/dhvfqgo7q/image/upload/v1711528785/maha-score/ad/sylwngycss9q1zcwg9qc.jpg\",\n                \"action\": \"http://smallAction\"\n            },\n            \"large\": {\n                \"image\": \"https://res.cloudinary.com/dhvfqgo7q/image/upload/v1711528787/maha-score/ad/mhadvppmsoy4xy2mfe4a.webp\",\n                \"action\": \"http://largeAction\"\n            }\n        },\n        \"interstitial\": {\n            \"image\": \"https://res.cloudinary.com/dhvfqgo7q/image/upload/v1711528789/maha-score/ad/g1etzdaauwezwzew2jbw.gif\",\n            \"action\": \"http://interstitialAction\"\n        },\n        \"_id\": \"6603db554cfbb5793f3dc9a4\",\n        \"country\": \"BD\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6Ijg4MDE5ODc1MTgwMjUiLCJpYXQiOjE3MTE0MzQ5NzMsImV4cCI6MTcxNDAyNjk3M30.N1unA9j9gxAx2KHUQMzjV5ipLWuR9iaD2TTEhxEQcHo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/admin/ad/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"ad",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6Ijg4MDE5ODc1MTgwMjUiLCJpYXQiOjE3MTE0MzQ5NzMsImV4cCI6MTcxNDAyNjk3M30.N1unA9j9gxAx2KHUQMzjV5ipLWuR9iaD2TTEhxEQcHo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/admin/ad/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"ad",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6603b88eb375047102ff5cf4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "f00087d5d0a30ea91816364a4852631e00fc3cd33ddde89dfc5f161365b2933f",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "x-api-key",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
